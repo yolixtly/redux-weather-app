@@ -1,7 +1,8 @@
 import { FETCH_WEATHER } from '../actions/index';
 
 export default function(state= [], action){
-	console.log('in Reducer Action was received', action.payload);
+	//shows received data after promise middleware kicked in.
+	console.log('action was received', action);
 	switch(action.type) {
 		case FETCH_WEATHER:
 					//this the only part of the response that we are interested 
