@@ -28,7 +28,7 @@ class SearchBar extends Component {
 	}
 	onFormSubmit(event){
 		event.preventDefault();
-		//TODO: fetch weather data API
+		//fetching weather data API
 		this.props.fetchWeather(this.state.term);
 		this.setState({term: ''});
 	}
@@ -50,7 +50,7 @@ class SearchBar extends Component {
 function mapDispatchToProps(dispatch){
 	//action creator flows down into the middleware
 	// and then the reducer inside of the app
-	return bindActionCreators({fetchWeather} , dispatch)
+	return bindActionCreators({ fetchWeather } , dispatch)
 }
 // we dont need a state here for now that is why is null
 //  in the first param
